@@ -6,16 +6,16 @@
 Unsere Entwicklungsumgebung umfasst folgende Komponenten:
 
 - das Software Developer Kit (SDK), also die Programmiersprache Python einschließlich des Interpreters und vieler Bibliotheken
-- eine integrierte Entwicklungsumgebung zum Editieren von Quellcode
+- eine integrierte Entwicklungsumgebung (*IDE*) zum Editieren von Quellcode
 - eine einheitliche Ordnerstruktur im Dateisystem für Softwareentwicklungsprojekte
 - eine virtuelle Umgebung
 - ein Testframework
 - weitere Bibliotheken von Drittanbietern
-- eine lokale Versionsverwaltung
 
 Wer bereits Erfahrung mit den Werkzeugen für die Softwareentwicklung hat, kann folgende Komponenten zusätzlich integrieren:
 
 - eine Software zur Verwaltung des Python-Projektes
+- eine lokale Versionsverwaltung
 - einen Account für eine cloudgestützte Versionsverwaltung
 
 == Installationsquellen und Lizenzbedingungen
@@ -62,20 +62,9 @@ Informiere dich über VS Code. Aufgaben:
 - Woher kannst du VS Code beziehen?
 - Wie viel kostet es?
 - VS Code allein ist gar keine IDE, sondern nur ein Code-Editor. Wie wird VS Code zur vollwertigen IDE?
-- Installiere VS Code und die Plugins, die für Python-Programmierung erforderlich sind.
 
-== Die Ordnerstruktur im Dateisystem
+Die Installation und Konfiguration von VS Code behandeln wir im nächsten Kapitel. (@anleitung_ide)
 
-Jetzt schaffen wir eine übersichtliche Ordnerstruktur, damit wir den Quellcode wiederfinden.
+== Die Projektstruktur
 
-- Erzeuge in deinem Benutzerverzeichnis einen Unterordner _Programmierprojekte_.
-- Erzeuge in diesem Ordner einen Unterordner _Bruchrechnen_ für unser aktuelles Projekt.
-- Im Ordner _Bruchrechnen_ selbst werden alle Dateien gespeichert, die eine übergeordnete Bedeutung im Projekt besitzen.
-- Der Ordner _Bruchrechnen_ erhält nur zwei Unterordner:
-  - Der Ordner _src_ wird die Quellcodedateien für den funktionalen Code enthalten.
-  - Im Ordner _test_ werden die Unittest-Dateien gespeichert.
-- Ein weiteren versteckten Ordner werden wir als virtuelle Python-Umgebung anlegen.
-
-== Die virtuelle Entwicklungsumgebung in Python
-
- Wir möchten das Programmierprojekt möglichst gut von dem restlichen Dateisystem abschirmen, um mögliche Wechselwirkungen zwischen der allgemeinen Funktion des Computers und der Programmiertätigkeit auszuschließen.
+Der Aufbau der Projektstruktur wird im übernächsten Kapitel beschrieben. (@anleitung_projekt)

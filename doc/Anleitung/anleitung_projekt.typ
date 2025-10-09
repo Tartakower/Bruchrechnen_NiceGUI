@@ -1,4 +1,4 @@
-= Einrichten des Entwicklungsprojektes
+= Einrichten des Entwicklungsprojektes <anleitung_projekt>
 
 In diesem Kapitel werden wir die Infrastruktur für unser Entwicklungsprojekt einrichten. Das sollte überwiegend in VS Code durchgeführt werden, damit alle Komponenten reibungslos zusammen arbeiten.
 
@@ -33,7 +33,7 @@ Damit sich alle Python-Module untereinander kennen, gibt es die Umgebungsvariabl
 
 Dieser Schritt sollte unbedingt in VS Code erfolgen! Die Einrichtung einer virtuellen Umgebung ohne VS Code kann große Probleme für unser Vorhaben erzeugen.
 
-- Öffne die Befehlspalette (entweder über das Menü _Anzeigen_ oder mittels `STRG+UMSCHALT+P`).
+- Öffne die Befehlspalette.
 - Wähle _Python: Umgebung erstellen_.
 - Wähle _Venv_ aus.
 - Wähle den Interpreter `/bin/python3` aus.
@@ -43,13 +43,23 @@ Im Hintergrund wird eine virtuelle Umgebung angelegt. Dass es geklappt hat, erke
 - Im Hauptordner gibt es einen neuen Unterordner _.venv_.
 - Wenn du ein neues Terminal startest, dann ist die virtuelle Umgebung aktiviert. Der Pfadname des Terminalprompts beginnt mit `(.venv)`
 
-== Installation des Testframeworks
+== Konfiguration der Softwaretest und Installation des Testframeworks
 
-Installiere das Testframework Pytest.
+- Öffne die Befehlspalette.
+- Wähle _Python: Tests konfigurieren_.
+- Wähle _pytest_.
+- Wähle _. Root directory_.
+
+Im Hintergrund wird das Testframework Pytest installiert. Prüfe:
 
 - Starte ein Terminal.
-- Führe dort den Befehl `python -m pip install pytest` aus.
-
-== Konfiguration des Softwaretests
-
+- Der Befehl `pip list` sollte pytest auflisten.
 - Drücke im Navigator auf der linken Seite auf den Erlenmeyerkolben.
+  - Zeigt dieser den Hauptordner an? Dann sollte alles in Ordnung sein.
+  - Zeigt der Navigator einen Fehler? Dieser sollte nach dem Aktualisieren verschwinden.
+
+== Installation des GUI-Frameworks NiceGui
+
+- Öffne ein Terminal.
+- Ist die virtuelle Umgebung aktiviert? Andernfalls bitte aktivieren: `source .venv/bin/activate`
+- Der Befehl `python -m pip install nicegui` installiert das GUI-Framework.
