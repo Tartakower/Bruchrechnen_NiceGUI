@@ -23,7 +23,9 @@
 #include "anleitung_projekt.typ"
 #include "anleitung_architektur.typ"
 #include "anleitung_ggt.typ"
-// #show: doc => kapitel("ooad_bruch", doc)
+#include "loesung_ggt.typ"
+#include "anleitung_ooad.typ"
+#include "loesung_ooad.typ"
 // #show: doc => kapitel("klasse_bruch", doc)
 // #show: doc => kapitel("gui",  doc)
 // #show: doc => kapitel("klasse_zahl", doc)
