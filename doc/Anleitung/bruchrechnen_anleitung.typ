@@ -26,6 +26,7 @@
 #include "loesung_ggt.typ"
 #include "anleitung_ooad.typ"
 #include "loesung_ooad.typ"
-// #show: doc => kapitel("klasse_bruch", doc)
+#include "anleitung_klasse_bruch.typ"
+
 // #show: doc => kapitel("gui",  doc)
 // #show: doc => kapitel("klasse_zahl", doc)

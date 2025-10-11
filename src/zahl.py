@@ -19,13 +19,23 @@ class Bruch(Zahl):
     def __init__(self: Bruch, zaehler: int, nenner: int):
         if nenner == 0:
             raise ValueError("Nenner darf nicht 0 sein.")
-        
-        faktor = 1 if nenner > 0 else -1
-        object.__setattr__(self, 'zaehler', faktor * zaehler)
-        object.__setattr__(self, 'nenner', faktor * nenner)
+        object.__setattr__(self, 'zaehler', zaehler)
+        object.__setattr__(self, 'nenner', nenner)
+
+    def berechne_wert(self) -> float:
+        return self.zaehler / self.nenner
 
     def berechne_bruch(self) -> Bruch:
         return self
+    
+    def normiere_bruch(self) -> Bruch:
+        if self.nenner > 0:
+            return self
+        else:
+            return Bruch(-1 * self.zaehler, -1 * self.nenner)
+        
+    def vereinfache_bruch(self) -> Bruch:
+        return self.normiere_bruch().kuerze()
 
     def kuerze(self) -> Bruch:
         ggT = mathefunktionen.berechne_ggt(self.zaehler, self.nenner)

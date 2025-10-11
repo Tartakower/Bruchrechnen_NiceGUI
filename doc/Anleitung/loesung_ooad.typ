@@ -75,3 +75,14 @@ $ frac(a,b) div frac(c,d) = frac(a,b) dot frac(d,c) $
 
 Wir programmieren also eine Funktion zur Bildung des Kehrwertes und führen die Division auf die Multiplikation zurück.
 
+== Das Addieren von Brüchen
+
+Für das Addieren müssen die Nenner gleichnamig gemacht werden, also ein gemeinsamer, der sogenannte Hauptnenner gefunden werden. Ein möglicher Hauptnenner ist das Produkt der beiden Nenner. (Alternativ kann aus den beiden Nenner deren kleinstes gemeinsames Vielfaches (*kgV*) gebildet werden.)
+
+$ frac(a,b) + frac(c,d) = frac(a dot d,b dot d) + frac(c dot b, b dot d) = frac(a dot d + c dot b, b dot d) $
+
+== Das Subtrahieren von Brüchen
+
+Für das Subtrahieren stellen wir eine ähnliche Überlegung an wie für das Dividieren: Die Subtraktion ist eine Addition, wobei der zweite Summand einem Vorzeichenwechsel vollzieht. Wir programmieren also eine Funktion zum Vorzeichenwechsel bei einem Bruch und führen eine Addition aus.
+
+$ frac(a,b) - frac(c,d) = frac(a,b) + frac(-c, d) $
