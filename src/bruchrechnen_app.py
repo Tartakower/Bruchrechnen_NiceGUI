@@ -5,6 +5,7 @@ from operatoren import Operator
 from zahl import Bruch
 
 
+
 def berechne(op: Operator, bruch_1: Bruch, bruch_2: Bruch) -> Bruch:        
         if op == Operator.PLUS:
             return bruch_1.addiere(bruch_2)
@@ -21,10 +22,19 @@ def berechne(op: Operator, bruch_1: Bruch, bruch_2: Bruch) -> Bruch:
 def werte_aus() -> None:
     b1 = Bruch(int(zaehler_1.value), int(nenner_1.value))
     b2 = Bruch(int(zaehler_2.value), int(nenner_2.value))
-    b: Bruch = berechne(Operator(op_select.value), b1, b2)
-    zaehler_res.set_text(str(b.zaehler))
-    nenner_res.set_text(str(b.nenner))
+    global ergebnis
+    ergebnis = berechne(Operator(op_select.value), b1, b2)
+    formel = "$\\frac{" + str(ergebnis.zaehler) + "}{" + str(ergebnis.nenner) + "}$"
+    resultat.set_content(formel)
 
+
+def vereinfache() -> None:
+    b = ergebnis.vereinfache_bruch()
+    formel = "$\\frac{" + str(b.zaehler) + "}{" + str(b.nenner) + "}$"
+    res_normiert.set_content(formel)
+
+
+ergebnis: Bruch = Bruch(1,1)
 
 with ui.card(align_items='center'):
     with ui.row(align_items='center'):
@@ -36,9 +46,11 @@ with ui.card(align_items='center'):
             zaehler_2 = ui.number(label='Zähler', value=1)
             nenner_2 = ui.number(label='Nenner', value=1)
         ui.button('=', on_click=lambda: werte_aus())
-        with ui.column(align_items='stretch'):
-            zaehler_res = ui.label('Zähler')
-            nenner_res = ui.label('Nenner')
+        with ui.column():
+            resultat = ui.markdown("", extras=['latex']).style('font-size: 500%')
+        ui.button('=', on_click=lambda: vereinfache())
+        with ui.column():
+            res_normiert = ui.markdown("", extras=['latex']).style('font-size: 500%')
 
 
 ui.run()
