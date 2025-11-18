@@ -27,6 +27,7 @@
 #include "anleitung_ooad.typ"
 #include "loesung_ooad.typ"
 #include "anleitung_klasse_bruch.typ"
+#include "loesung_klasse_bruch.typ"
 
 // #show: doc => kapitel("gui",  doc)
 // #show: doc => kapitel("klasse_zahl", doc)
