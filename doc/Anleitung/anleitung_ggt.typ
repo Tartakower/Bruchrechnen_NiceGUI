@@ -1,6 +1,6 @@
 = Eine Funktion in Python: Programmierung und Testen
 
-Versuchen, die beiden unten angegebenen Aufgaben selbstständig, eventuelle im Team oder mit Hilfe des Betreuers zu lösen. Falls du nicht weiter kommst oder dein Ergebnis überprüfen willst, steht im nächsten Kapitel die Musterlösung. (@loesung_ggt)
+Versuche, die beiden unten angegebenen Aufgaben selbstständig, eventuell im Team oder mit Hilfe des Betreuers zu lösen. Falls du nicht weiter kommst oder dein Ergebnis überprüfen willst, steht im nächsten Kapitel die Musterlösung. (@loesung_ggt)
 
 == Die Funktion zur Berechnung des größten gemeinsamen Teilers
 
@@ -23,4 +23,4 @@ Ein professioneller Softwareentwickler programmiert die Tests für den eigenen f
 - Programmiere die von dir als sinnvoll angesehenen Test jeweils als _assert_-Befehl.
 - Öffne die Testansicht (Erlenmeyerkolben im Navigator).
 - Führe die Tests aus.
-- Sind nur grüne Haken zu sehen? Oder gibt es auch rote Kreuze.
+- Sind nur grüne Haken zu sehen? Oder gibt es auch rote Kreuze?

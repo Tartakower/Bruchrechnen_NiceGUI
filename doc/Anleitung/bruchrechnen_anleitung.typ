@@ -28,6 +28,6 @@
 #include "loesung_ooad.typ"
 #include "anleitung_klasse_bruch.typ"
 #include "loesung_klasse_bruch.typ"
-
-// #show: doc => kapitel("gui",  doc)
-// #show: doc => kapitel("klasse_zahl", doc)
+#include "anleitung_bruch_methoden.typ"
+#include "anleitung_gui.typ"
+#include "anleitung_zahl.typ"
